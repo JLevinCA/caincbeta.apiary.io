@@ -952,12 +952,13 @@ The following is a section of resources related to i-Ready Class resources.
 >|--------|------|--------|-----------|-----------|----------------|
 >|**classCode**|string, length 10|||yes|string, length 10|
 >|**createdDate**|string||read-only|no|yyyy-MM-dd'T'kk:mm:ss'Z' - Universal Sortable Date Time|
->|**gradeLevel**|int|||no|0 - 12|
+>|**gradeLevel**|int|||yes|0 - 12|
 >|**id**|string|globally|read-only|no|string, length 32|
 >|**location**|string|||yes|null &#124;string, length 255|
 >|**name**|string|within academic-year/school/product||no|null &#124;string, length 255|
 >|**ownerId**|string|within district||yes|null &#124; string, length 128|
 >|**partnerId**|string|within district||yes|null &#124; string, length 128|
+>|**term**|string|||yes|null &#124; string, length 45|
 >|_**product**_|link||create-time|no||
 >|_**school**_|link||create-time|no||
 >|_**self**_|link|globally|read-only|no||
