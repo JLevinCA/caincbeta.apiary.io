@@ -168,7 +168,7 @@ GET /<top-level-collection>?limit=10&offset
     }
 }
 
-Top level resources, E.g. Students, Classes, staffMembers, etc, are identified as items within their corresponding top level collection.
+Top level resources, E.g. Students, Classes, StaffMembers, etc, are identified as items within their corresponding top level collection.
 GET /<top-level-collection>/{id}
 > Authorization: Basic REktQWRtaW4yOnBhc3N3b3JkMg==
 < 200
@@ -776,12 +776,12 @@ GET /api/v1/schools/{id}/students/{reference-id}
 
 
 --
- School/staffMember Resources
-The following is a section of resources related to i-Ready School/staffMember relationship resources.
+ School/StaffMember Resources
+The following is a section of resources related to i-Ready School/StaffMember relationship resources.
 
-The School/staffMember resources are all read-only; Only http GET requests are supported.
+The School/StaffMember resources are all read-only; Only http GET requests are supported.
 
->### School/staffMember Properties
+>### School/StaffMember Properties
 >|Name|Type|Unique|Modifiable|Nullable|Valid Values|
 >|--------|------|--------|-----------|-----------|----------------|
 >|**createdDate**|date||read-only|no|yyyy-MM-dd'T'kk:mm:ss'Z' - Universal Sortable Date Time|
@@ -1271,10 +1271,10 @@ DELETE /api/v1/classes/{id}/students/{relationship-id}
 }
 
 --
- Class/staffMember Resources
-The following is a section of resources related to i-Ready Class/staffMember relationship resources.
+ Class/StaffMember Resources
+The following is a section of resources related to i-Ready Class/StaffMember relationship resources.
 
->### Class/staffMember Properties
+>### Class/StaffMember Properties
 >|Name|Type|Unique|Modifiable|Nullable|Valid Values|
 >|--------|------|--------|-----------|-----------|----------------|
 >|**createdDate**|date||read-only|no|yyyy-MM-dd'T'kk:mm:ss'Z' - Universal Sortable Date Time|
@@ -1410,7 +1410,7 @@ PUT /api/v1/classes/{id}/staffMembers/{relationship-id}
         "httpCode": "405",
         "errorId": "C10004",
         "userMessage": "Operation not supported.",
-        "detailsMessage": "Class/staffMember relationship resources can not be modified.",
+        "detailsMessage": "Class/StaffMember relationship resources can not be modified.",
         "apiVersion": "v1"
     }
 }
@@ -1906,12 +1906,12 @@ DELETE /api/v1/students/{id}/classes/{relationship-id}
 
 
 --
-staffMember Resources
-The following is a section of resources related to i-Ready staffMember resources.
+StaffMember Resources
+The following is a section of resources related to i-Ready StaffMember resources.
 
-staffMembers are identified by their userName. The staffMember's userName must by unique to all users within their distict account's state.
+StaffMembers are identified by their userName. The staffMember's userName must by unique to all users within their distict account's state.
 
->### staffMember Properties
+>### StaffMember Properties
 >|Name|Type|Unique|Modifiable|Nullable|Valid Values|
 >|--------|------|--------|-----------|-----------|----------------|
 >|**createdDate**|date||read-only|no|yyyy-MM-dd'T'kk:mm:ss'Z' - Universal Sortable Date Time|
@@ -1988,7 +1988,7 @@ GET /api/v1/staffMembers{?limit,offset}
     }
 }
 
-Create a new staffMember.
+Create a new StaffMember.
 
 Read-only properties will be ignored.
 POST /api/v1/staffMembers
@@ -2041,7 +2041,7 @@ POST /api/v1/staffMembers
     }
 }
 
-Get the details of a particular staffMember.
+Get the details of a particular StaffMember.
 GET /api/v1/staffMembers/{id}
 < 200
 < Content-Type: application/json
@@ -2125,7 +2125,7 @@ PUT /api/v1/staffMembers/{id}
     }
 }
 
-Deleting of staffMember resources is supported only for staffMember accounts that have not been used yet and are not assigned to any classes.  staffMember accounts that have not been used will have lastLoginDate set to null.
+Deleting of staffMember resources is supported only for staffMember accounts that have not been used yet and are not assigned to any classes.  StaffMember accounts that have not been used will have lastLoginDate set to null.
 DELETE /api/v1/staffMembers/{id}
 > Authorization: Basic REktQWRtaW4yOnBhc3N3b3JkMg==
 < 200
@@ -2141,10 +2141,10 @@ DELETE /api/v1/staffMembers/{id}
 }
 
 --
-staffMember/Class Resources
-The following is a section of resources related to i-Ready staffMember/Class relationship resources.
+StaffMember/Class Resources
+The following is a section of resources related to i-Ready StaffMember/Class relationship resources.
 
->### Class/staffMember Properties
+>### Class/StaffMember Properties
 >|Name|Type|Unique|Modifiable|Nullable|Valid Values|
 >|--------|------|--------|-----------|-----------|----------------|
 >|**createdDate**|date||read-only|no|yyyy-MM-dd'T'kk:mm:ss'Z' - Universal Sortable Date Time|
@@ -2244,7 +2244,7 @@ POST /api/v1/staffMembers/{id}/classes
     }
 }
 
-This is not the proper path to access staffMember/class relationship objects.  To retrieve staffMember/class relationship see the [Class/staffMember Resources](http://docs.cainc.apiary.io/#classstaffMember resources) section for the proper path to use. 
+This is not the proper path to access staffMember/class relationship objects.  To retrieve staffMember/class relationship see the [Class/StaffMember Resources](http://docs.cainc.apiary.io/#classstaffMember resources) section for the proper path to use. 
 GET /api/v1/staffMembers/{id}/classes/{relationship-id}
 > Authorization: Basic REktQWRtaW4yOnBhc3N3b3JkMg==
 < 404
@@ -2261,7 +2261,7 @@ GET /api/v1/staffMembers/{id}/classes/{relationship-id}
 
 Updating of staffMember/class relationships is not supported.  If a staffMember changes classes the old relationship should be deleted and a new one added.
 
-This is not the proper path to access staffMember/class relationship objects.  See the [Class/staffMember Resources](http://docs.cainc.apiary.io/#classstaffMember resources) section for the proper path to use.
+This is not the proper path to access staffMember/class relationship objects.  See the [Class/StaffMember Resources](http://docs.cainc.apiary.io/#classstaffMember resources) section for the proper path to use.
 PUT /api/v1/staffMembers/{id}/classes/{relationship-id}
 > Authorization: Basic REktQWRtaW4yOnBhc3N3b3JkMg==
 < 404
@@ -2276,7 +2276,7 @@ PUT /api/v1/staffMembers/{id}/classes/{relationship-id}
     }
 }
 
-This is not the proper path to access staffMember/class relationship objects.  To delete staffMember/class relationship see the [Class/staffMember Resources](http://docs.cainc.apiary.io/#classstaffMember resources) section for the proper path to use.
+This is not the proper path to access staffMember/class relationship objects.  To delete staffMember/class relationship see the [Class/StaffMember Resources](http://docs.cainc.apiary.io/#classstaffMember resources) section for the proper path to use.
 DELETE /api/v1/staffMembers/{id}/classes/{relationship-id}
 > Authorization: Basic REktQWRtaW4yOnBhc3N3b3JkMg==
 < 404
