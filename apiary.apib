@@ -1924,8 +1924,9 @@ StaffMembers are identified by their userName. The staffMember's userName must b
 >|**partnerId**|string|within district||yes|null &#124; string, length 128|
 >|**password**|string||*write-only*|no|string, length 4-24 - setting null on update leaves the password unchanged|
 >|**userName**|string|within state||no|string, length 50|
+>|**staffType**|string||create-time|no|'Teacher' &#124; 'SchoolAdministrator' &#124; 'DistrictAdministrator' &#124; 'Coordinator'|
 >|_**classes**_|link||read-only|no||
->|_**school**_|link||create-time|no||
+>|_**school**_|link||variable|variable|School must be null when staffType is 'DistrictAdministrator'; otherwise it is a required field.  It is read-only when staffType is 'SchoolAdministrator'|
 >|_**self**_|link|globally|read-only|no||
 
 --
