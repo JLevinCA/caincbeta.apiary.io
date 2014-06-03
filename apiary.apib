@@ -956,8 +956,8 @@ The following is a section of resources related to i-Ready Class resources.
 >|**id**|string|globally|read-only|no|string, length 32|
 >|**location**|string|||yes|null &#124;string, length 255|
 >|**name**|string|within academic-year/school/product||no|null &#124;string, length 255|
->|**ownerId**|string|within district||yes|null &#124; string, length 64|
->|**partnerId**|string|within district||yes|null &#124; string, length 64|
+>|**ownerId**|string|within district||yes|null &#124; string, length 128|
+>|**partnerId**|string|within district||yes|null &#124; string, length 128|
 >|_**product**_|link||create-time|no||
 >|_**school**_|link||create-time|no||
 >|_**self**_|link|globally|read-only|no||
@@ -1197,8 +1197,8 @@ The following is a section of resources related to i-Ready Class/Student relatio
 >|--------|------|--------|-----------|-----------|----------------|
 >|**createdDate**|date||read-only|no|yyyy-MM-dd'T'kk:mm:ss'Z' - Universal Sortable Date Time|
 >|**id**|string|globally|read-only|no|string, length 32|
->|**ownerId**|string|within district||yes|null &#124; string, length 64|
->|**partnerId**|string|within district||yes|null &#124; string, length 64|
+>|**ownerId**|string|within district||yes|null &#124; string, length 256|
+>|**partnerId**|string|within district||yes|null &#124; string, length 256|
 >|_**student**_|link||create-time|no||
 >|_**class**_|link||create-time|no||
 >|_**self**_|link|globally|read-only|no||
@@ -1363,8 +1363,8 @@ The following is a section of resources related to i-Ready Class/Teacher relatio
 >|--------|------|--------|-----------|-----------|----------------|
 >|**createdDate**|date||read-only|no|yyyy-MM-dd'T'kk:mm:ss'Z' - Universal Sortable Date Time|
 >|**id**|string|globally|read-only|no|string, length 32|
->|**ownerId**|string|within district||yes|null &#124; string, length 64|
->|**partnerId**|string|within district||yes|null &#124; string, length 64|
+>|**ownerId**|string|within district||yes|null &#124; string, length 256|
+>|**partnerId**|string|within district||yes|null &#124; string, length 256|
 >|_**teacher**_|link||create-time|no||
 >|_**class**_|link||create-time|no||
 >|_**self**_|link|globally|read-only|no||
@@ -1540,8 +1540,8 @@ Additionally the student's have a studentNumber that must be set.  The studentNu
 >|**lastName**|string|||no|string, length 50|
 >|**mathDevelopmentalLevel**|int|||yes|null &#124; 0-12|
 >|**migrant**|string|||yes|null &#124; true &#124; false|
->|**ownerId**|string|within district||yes|null &#124; string, length 64|
->|**partnerId**|string|within district||yes|null &#124; string, length 64|
+>|**ownerId**|string|within district||yes|null &#124; string, length 128|
+>|**partnerId**|string|within district||yes|null &#124; string, length 128|
 >|**password**|string||*write-only*|no|string, length 4-24 - setting null on update leaves the password unchanged|
 >|**specialEducation**|string|||yes|null &#124; true &#124; false|
 >|**studentId**|string|within district||no|string, length 50|
@@ -1841,8 +1841,8 @@ The following is a section of resources related to i-Ready Student/Class relatio
 >|--------|------|--------|-----------|-----------|----------------|
 >|**createdDate**|date||read-only|no|yyyy-MM-dd'T'kk:mm:ss'Z' - Universal Sortable Date Time|
 >|**id**|string|globally|read-only|no|string, length 32|
->|**ownerId**|string|within district||yes|null &#124; string, length 64|
->|**partnerId**|string|within district||yes|null &#124; string, length 64|
+>|**ownerId**|string|within district||yes|null &#124; string, length 256|
+>|**partnerId**|string|within district||yes|null &#124; string, length 256|
 >|_**student**_|link||create-time|no||
 >|_**class**_|link||create-time|no||
 >|_**self**_|link|globally|read-only|no||
@@ -2003,8 +2003,8 @@ Teachers are identified by their userName. The teacher's userName must by unique
 >|**id**|string|globally|read-only|no|string, length 32|
 >|**lastLoginDate**|date||read-only|yes|null &#124; yyyy-MM-dd'T'kk:mm:ss'Z' - Universal Sortable Date Time|
 >|**lastName**|string|||no|string, length 50|
->|**ownerId**|string|within district||yes|null &#124; string, length 64|
->|**partnerId**|string|within district||yes|null &#124; string, length 64|
+>|**ownerId**|string|within district||yes|null &#124; string, length 128|
+>|**partnerId**|string|within district||yes|null &#124; string, length 128|
 >|**password**|string||*write-only*|no|string, length 4-24 - setting null on update leaves the password unchanged|
 >|**userName**|string|within state||no|string, length 50|
 >|_**classes**_|link||read-only|no||
@@ -2232,8 +2232,8 @@ The following is a section of resources related to i-Ready Teacher/Class relatio
 >|--------|------|--------|-----------|-----------|----------------|
 >|**createdDate**|date||read-only|no|yyyy-MM-dd'T'kk:mm:ss'Z' - Universal Sortable Date Time|
 >|**id**|string|globally|read-only|no|string, length 32|
->|**ownerId**|string|within district||yes|null &#124; string, length 64|
->|**partnerId**|string|within district||yes|null &#124; string, length 64|
+>|**ownerId**|string|within district||yes|null &#124; string, length 256|
+>|**partnerId**|string|within district||yes|null &#124; string, length 256|
 >|_**teacher**_|link||create-time|no||
 >|_**class**_|link||create-time|no||
 >|_**self**_|link|globally|read-only|no||
